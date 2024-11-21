@@ -1,0 +1,124 @@
+.modal {
+  color: black;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.4);
+  width: calc(100% - 40px);
+  max-width: 690px;
+  margin: 15px 0;
+  max-height: calc(100vh - 30px);
+  display: none;
+  @media (max-width: 500px) {
+    max-width: calc(100vw - 40px) !important;
+  }
+
+  .close__btn::before{
+    content: url(./close.svg);
+  }
+  &__content {
+    padding: 30px;
+    background-color: #161717;
+    max-height: calc(100vh - 30px);
+    color: #fff;
+    border-radius: 10px;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    @media (max-width: 500px) {
+      padding: 15px;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 21.6px;
+      color: #fff;
+      padding-right: 15px;
+    }
+  }
+  &__header {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__body {
+    p {
+      margin: 13px 0 33px 0;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19.2px;
+      opacity: 0.65;
+    }
+
+    form {
+      display: flex;
+      gap: 16px;
+      .select2 {
+        width: 100% !important;
+      }
+
+      & > div {
+        width: 100%;
+      }
+      @media (max-width: 500px) {
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+    }
+  }
+  .close_button,
+  .close__btn {
+    vertical-align: middle;
+    margin-left: auto;
+    cursor: pointer;
+    transition: all 0.5s;
+    border-radius: 100%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    img {
+      min-width: 15px;
+      min-height: 15px;
+    }
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  .form-control {
+    background: #121212;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    color: #fff;
+    width: 100%;
+    &::placeholder {
+      color: #fff;
+      opacity: 0.15;
+    }
+  }
+
+  .red_btn{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    background: #c92222;
+    border-radius: 6px;
+    transition: all 0.3s linear;
+    display: block;
+    &:hover{
+      opacity: 0.7;
+    }
+    &.disabled {
+      background: #544e4e;
+      opacity: 0.25;
+      cursor: default;
+    }
+  }
+}
