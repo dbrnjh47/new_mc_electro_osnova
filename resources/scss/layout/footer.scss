@@ -1,6 +1,6 @@
 .footer {
   margin-top: auto;
-  @media (min-width: 1050px) {
+  @media (max-width: 1050px) {
     margin-bottom: 80px;
   }
   &__content {
